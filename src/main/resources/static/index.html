@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat application</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="/stomp.js"></script>
+</head>
+<body>
+
+    <div>
+        <label for="userName">Your name: </label>
+        <input type="text" name="userName" id="userName">
+        <label for="message">Message: </label>
+        <input id="message" name="message" type="text">
+        <button onclick="sendMessage()" id="send">Send message</button>
+    </div>
+    <div id="response">
+
+    </div>
+
+    <script src="/chat.js"></script>
+</body>
+</html>
