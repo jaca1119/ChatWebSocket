@@ -1,6 +1,6 @@
 let stompClient = null;
 
-stompClient = Stomp.client("ws://localhost:8080/chat");
+stompClient = Stomp.client("wss://websocket-chat-spring.herokuapp.com/chat");
     console.log(stompClient);
     stompClient.connect({}, function(frame) {
         console.log("connected: " + frame);
