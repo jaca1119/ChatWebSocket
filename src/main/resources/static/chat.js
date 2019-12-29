@@ -40,7 +40,7 @@ function showMessage(message)
 function processMessage(rawMessage)
 {
     let json = JSON.parse(rawMessage.body);
-    let outputMessage = json.userName + ': ' + json.messageContent + '( ' + json.outputTime + ' )';
+    let outputMessage = json.userName + ': ' + json.messageContent + ' ( ' + json.outputTime + ' )';
 
     return outputMessage;
 }
