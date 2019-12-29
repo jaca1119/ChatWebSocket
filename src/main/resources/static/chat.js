@@ -7,6 +7,8 @@ stompClient = Stomp.client("wss://websocket-chat-spring.herokuapp.com/chat");
         stompClient.subscribe("/broker/messages", function (message)
         {
             console.log(message.body);
+            let processedMessage = processMessage(message);
+            showMessage(processedMessage);
         });
     });
 
