@@ -7,6 +7,8 @@ stompClient = Stomp.client("ws://localhost:8080/chat");
         stompClient.subscribe("/broker/messages", function (message)
         {
             console.log(message.body);
+            let processedMessage = processMessage(message);
+            showMessage(processedMessage);
         });
     });
 
